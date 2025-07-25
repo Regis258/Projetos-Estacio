@@ -9,7 +9,7 @@ int main()
 
     char estado1[2], estado2[2];
     char cidade1[20], cidade2[20];
-    float pib1, area1, pib2, area2, pibPerCapta1, pibPerCapta2, densidade1, densidade2;
+    float pib1, area1, pib2, area2, pibPerCapta1, pibPerCapta2, densidade1, densidade2, densidadePibPerCapta1, densidadePibPerCapta2, superPoder1, superPoder2;
     int populacao1, pontosTuristicos1, populacao2, pontosTuristicos2;
     int carta1 = 1;
     int carta2 = 2;
@@ -40,6 +40,8 @@ int main()
 
     densidade1 = (float)populacao1 / area1;  // converter a variavel (populacao1) que é int pra float
     pibPerCapta1 = (float)pib1 / populacao1; // converter a variavel (populacao1) que é int pra float
+    densidadePibPerCapta1 = (float)densidade1 + pibPerCapta1;
+    superPoder1 = (float)(populacao1 + area1 + pib1 + pontosTuristicos1 + pibPerCapta1) / densidade1;
 
     // entrada de dados da carta 2
 
